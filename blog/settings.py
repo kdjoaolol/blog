@@ -25,9 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'ws@%x(!^56ynlwv8fuh42n5n@l(m$np_0z@-lk4uoq&@cze9^@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['34.95.184.108']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -85,8 +85,8 @@ DATABASES = {
         'NAME': 'blog_django',
         'HOST': '127.0.0.1',
         'PORT': '3306',
-        'USER': 'cursopython',
-        'PASSWORD': 'curs0Pyth0n@169',
+        'USER': 'root',
+        'PASSWORD': '',
     }
 }
 
@@ -145,12 +145,3 @@ MESSAGE_TAGS = {
 INSTALLED_APPS += ('django_summernote', )
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-SECURE_SSL_REDIRECT = True
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
-
-try:
-    from .local_settings import *
-except :
-    pass
