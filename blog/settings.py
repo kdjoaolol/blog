@@ -27,7 +27,7 @@ SECRET_KEY = 'ws@%x(!^56ynlwv8fuh42n5n@l(m$np_0z@-lk4uoq&@cze9^@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['34.95.184.108']
+ALLOWED_HOSTS = ['CURSOPYTHON.jvicamaral.tk']
 
 
 # Application definition
