@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load crispy_forms_tags %}
 
 {% block titulo %}{{ post.titulo_post }} | {% endblock %}
 
@@ -59,16 +60,18 @@
 
               <form method="POST" action="#envia_comentario">
                   {% csrf_token %}
-                  <table class="table">
-                        {{ form }}
-                      <tr>
-                          <td colspan="2">
+                  
+                  {% for hidden_field in form.hidden_fields %}
+                  {{ hidden_field }}
+                  {% endfor %}
+
+                  {% for visible_field in form.visible_fields %}                 
+                      {{ visible_field|as_crispy_field }}
+                  {% endfor %}
+
+
                                 {% include 'parciais/_messages.html' %}
-                              <input id="envia_comentario" type="submit" class="btn btn-primary"
-                                  value="Enviar">
-                          </td>
-                      </tr>
-                  </table>
+                  <input id="envia_comentario" type="submit" class="btn btn-primary" value="Enviar">
               </form>
 
 
