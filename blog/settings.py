@@ -148,7 +148,6 @@ MESSAGE_TAGS = {
 INSTALLED_APPS += ('django_summernote', )
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 AUTHENTICATION_BACKENDS = [
     # AxesBackend should be the first backend in the AUTHENTICATION_BACKENDS list.
@@ -162,6 +161,8 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 SECURE_SSL_REDIRECT = True
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 try:
     from .local_settings import *
